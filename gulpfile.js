@@ -5,6 +5,9 @@ const clean = require('gulp-clean');
 const runSequence = require('run-sequence');
 const directoryMap = require("gulp-directory-map");
 const data = require('gulp-data');
+const tap = require('gulp-tap');
+const path = require('path');
+const newfile = require('gulp-file');
 
 runSequence.options.ignoreUndefinedTasks = true;
 
@@ -22,7 +25,7 @@ gulp.task('font-blast', (cb) => {
     setTimeout(() => {
         cb();
     }, 8000);
-})
+});
 
 gulp.task('icons-dir-map', () => {
     return gulp.src(`./dist/fa-icons/svg/*.svg`)
@@ -32,13 +35,25 @@ gulp.task('icons-dir-map', () => {
         .pipe(gulp.dest(`./dist/dir-map`));
 });
 
-gulp.task('gen-template-string', (cb) => {
-    return gulp.src(`./dist/dir-map/fa-icons-list.json`)
-        .pipe(data(function (file) {
-            return require('./examples/' + path.basename(file.path) + '.json');
-        }))
-        .pipe(swig())
-        .pipe(gulp.dest('build'));
+gulp.task('gen', (cb) => {
+    const iconList = require(`./dist/dir-map/fa-icons-list.json`);
+    const iconKeys = Object.keys(iconList);
+    if (iconKeys && iconKeys.length) {
+        let o = {};
+        iconKeys.forEach((key) => {
+            const fileContent = require(`./dist/fa-icons/svg/${key}`);
+            o[key] = `${fileContent}`
+        })
+        console.log(o);
+    }
+
+
+    // return gulp.src()
+    //     .pipe(tap((file) => {
+    //         var contents = 'hello!';
+    //         return newfile('fa-svg-template-strings.js', contents)
+    //             .pipe(gulp.dest('jey'));
+    //     }));
 
     // let fileContent = fs.readFileSync(config.src.iconsList, "utf8");
     // return gulp.src(dirs.src + '/templates/*.html')
@@ -46,14 +61,6 @@ gulp.task('gen-template-string', (cb) => {
     //     .pipe(gulp.dest('destination/path'));
 });
 
-const testFn = () => {
-    console.log('JEY');
-}
-
 gulp.task('default', runSequence(
-    'clean',
-    testFn,
-    'font-blast',
-    'icons-dir-map'
-    // 'gen-template-string'
+    ['clean'], ['font-blast'], ['icons-dir-map'], ['gen']
 ));
