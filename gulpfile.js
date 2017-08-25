@@ -22,12 +22,17 @@ gulp.task('_font-blast', (cb) => {
     }, 5000);
 });
 
-gulp.task('_blob', function () {
+gulp.task('_blob', () => {
     gulp.src('./src/fa-icons/svg/*.svg')
         .pipe(fc2json('fa-icons-svg.json'))
         .pipe(gulp.dest('./dist/'));
 });
 
-gulp.task('default', runSequence(['_clean'], ['_font-blast'], ['_blob']));
+gulp.task('_module', () => {
+    gulp.src('./src/index.js')
+        .pipe(gulp.dest('./dist'));
+})
+
+gulp.task('default', runSequence(['_clean'], ['_font-blast'], ['_blob'], ['_module']));
 
 gulp.task('build', ['default']);

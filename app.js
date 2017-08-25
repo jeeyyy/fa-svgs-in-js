@@ -1,3 +1,4 @@
-var icons = require('./src');
+var getIcon = require('./dist');
 
-console.log(icons.test);
+var wrench = getIcon('test123');
+console.log(wrench);

@@ -1,11 +1,11 @@
 {
     "name": "fa-svgs-as-json",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "",
     "main": "gulpfile.js",
     "scripts": {
-        "start": "gulp",
-        "build": "gulp build"
+        "start": "npm i && gulp",
+        "build": "npm i && gulp build"
     },
     "keywords": [],
     "author": "Jey Nandakumar <jey.nandakumar@gmail.com>",

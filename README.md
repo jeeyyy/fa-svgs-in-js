@@ -1,3 +1,3 @@
-# fa-svgs-as-string
+# fa-svgs-as-svg
 
-Font Awesome 4.7.0 icon set available as strings that can be imported easily.
+Font Awesome 4.7.0 icon set available as json that can be imported easily.
