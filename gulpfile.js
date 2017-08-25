@@ -63,3 +63,8 @@ gulp.task('_module', () => {
 gulp.task('default', runSequence(['_clean'], ['_yml'], ['_font-blast'], ['_blob'], ['_module']));
 
 gulp.task('build', ['default']);
+
+
+// strict-ssl=false
+// always-auth=true
+// registry=https://registry.npmjs.org/
