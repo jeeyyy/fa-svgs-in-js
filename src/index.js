@@ -6,7 +6,7 @@ function getIcon(iconName) {
     if (svg) {
         return svg;
     } else {
-        throw new Error('No Icon with the name requested in font-awesome. Refer http://fontawesome.io/icons/ for list of icons. Icon should be requested with just the name and without the fa- prefix, Eg: getIcon("pencil").');
+        throw new Error('No Icon with the name: ' + iconName + ', requested in font-awesome. Refer http://fontawesome.io/icons/ for list of icons. Icon should be requested with just the name and without the fa- prefix, Eg: getIcon("pencil").');
     }
 }
 
