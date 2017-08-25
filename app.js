@@ -1,4 +1,4 @@
 var getIcon = require('./dist');
 
-var wrench = getIcon('test123');
+var wrench = getIcon('wrench');
 console.log(wrench);
