@@ -1,6 +1,6 @@
 {
-    "name": "fa-svgs-as-json",
-    "version": "1.1.0",
+    "name": "fa-svgs-for-js",
+    "version": "1.0.0",
     "description": "",
     "main": "gulpfile.js",
     "scripts": {
