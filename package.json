@@ -1,31 +1,31 @@
 {
-  "name": "fa-svgs-in-js",
-  "version": "1.0.0",
-  "description": "",
-  "main": "gulpfile.js",
-  "scripts": {
-    "start": "npm i && gulp",
-    "build": "npm i && gulp build"
-  },
-  "keywords": [],
-  "author": "Jey Nandakumar <jey.nandakumar@gmail.com>",
-  "license": "ISC",
-  "devDependencies": {
-    "ajax-request": "^1.2.3",
-    "font-blast": "^0.6.1",
-    "fs": "0.0.1-security",
-    "gulp": "^3.9.1",
-    "gulp-clean": "^0.3.2",
-    "gulp-download": "0.0.1",
-    "gulp-file-contents-to-json": "^0.2.1",
-    "js-yaml": "^3.9.1",
-    "path": "^0.12.7",
-    "run-sequence": "^2.1.0",
-    "superagent": "^3.6.0",
-    "tmp": "0.0.33"
-  },
-  "dependencies": {
-    "font-awesome": "^4.7.0",
-    "gulp-yaml": "^1.0.1"
-  }
+    "name": "fa-svgs-in-js",
+    "version": "2.0.0",
+    "description": "",
+    "main": "gulpfile.js",
+    "scripts": {
+        "start": "npm i && gulp",
+        "build": "npm i && gulp build"
+    },
+    "keywords": [],
+    "author": "Jey Nandakumar <jey.nandakumar@gmail.com>",
+    "license": "ISC",
+    "devDependencies": {
+        "ajax-request": "^1.2.3",
+        "font-blast": "^0.6.1",
+        "fs": "0.0.1-security",
+        "gulp": "^3.9.1",
+        "gulp-clean": "^0.3.2",
+        "gulp-download": "0.0.1",
+        "gulp-file-contents-to-json": "^0.2.1",
+        "js-yaml": "^3.9.1",
+        "path": "^0.12.7",
+        "run-sequence": "^2.1.0",
+        "superagent": "^3.6.0",
+        "tmp": "0.0.33"
+    },
+    "dependencies": {
+        "font-awesome": "^4.7.0",
+        "gulp-yaml": "^1.0.1"
+    }
 }
