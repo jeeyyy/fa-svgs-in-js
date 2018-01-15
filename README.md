@@ -8,6 +8,11 @@ A tiny helper library that converts the available [Font-Awesome 4.7.0](http://fo
 
 This enables easy imports in JavaScript & allows for embedding font-icons as SVG, which circumvents issues created by MIME paths for font-files (ttf, eot, woff) being disallowed or font-download being prevented for security reasons by the browser.
 
+### Installation
+```js
+npm i fa-svgs-in-js;
+```
+
 ### Usage
 ```js
 import * as faGetIcon from 'fa-svgs-in-js/dist';
