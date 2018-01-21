@@ -49,4 +49,4 @@ Steps | Command | Description
 ---|---|---
 1 | npm run start | Installs all dependencies `node_modules` etc., that are necessary for building the project.
 2 | npm run dist | Generate library in ./dist directory.
-8 | npm run publish | Publish library/ module. Refer Usage section.
+3 | npm run publish | Publish library/ module. Refer Usage section.
